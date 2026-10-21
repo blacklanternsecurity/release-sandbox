@@ -1,0 +1,14 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bls-release-sandbox"
+version = "0.0.1"
+description = "Throwaway package for rehearsing the BLS release flow on TestPyPI"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+
+[dependency-groups]
+dev = ["pytest"]

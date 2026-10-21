@@ -1,0 +1,15 @@
+# Rehearsal only: proves the release environment refuses any branch but stable. Run it by hand from
+# dev (it should be refused before the job starts) and from stable (it should wait for approval).
+# It reads no secrets and does nothing once approved.
+name: env-probe
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    environment: release
+    steps:
+      - run: echo "the release environment admitted ${GITHUB_REF}"
