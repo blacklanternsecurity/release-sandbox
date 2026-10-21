@@ -35,3 +35,8 @@ jobs:
       - uses: zizmorcore/zizmor-action@cc914d7f3750a2d13d75c7f184a1060aa0e9d482 # v0.6.4
         with:
           advanced-security: false
+          # Pinned, so the gate's verdict changes only when we change it. The action defaults to the
+          # newest zizmor, which can add audits overnight.
+          version: "1.15.2"
+          # Block on real problems; low-severity findings are style and would train people to ignore the gate.
+          min-severity: medium
