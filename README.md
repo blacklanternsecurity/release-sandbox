@@ -8,3 +8,9 @@ What it exercises:
 - the release App's ID and key read from the `release` environment, with this repository's workflows passing nothing;
 - an unchanged version releasing nothing, and a run from any branch but `stable` being refused;
 - the `dev` gate: tests plus automated security checks, with authors merging their own `dev` pull requests.
+
+## License
+
+Copyright (C) 2026 Black Lantern Security
+
+Licensed under the GNU Affero General Public License v3.0 or later (`AGPL-3.0-or-later`). See [LICENSE](LICENSE).
