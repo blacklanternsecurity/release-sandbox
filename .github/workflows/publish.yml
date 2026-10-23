@@ -14,7 +14,8 @@ jobs:
     permissions:
       contents: read
       actions: read
-    uses: blacklanternsecurity/CLA/.github/workflows/release-check.yml@6fc2cf5fe9b8458452c494e8f3285d4aa250e076 # fix/release-on-stable (rehearsal)
+      pull-requests: read
+    uses: blacklanternsecurity/CLA/.github/workflows/release-check.yml@31d721990c676a274e4edbc55dfe841ddf6995b6 # fix/release-on-stable (rehearsal)
 
   tests:
     needs: check
@@ -63,7 +64,7 @@ jobs:
     if: needs.check.outputs.release == 'true'
     permissions:
       contents: read
-    uses: blacklanternsecurity/CLA/.github/workflows/publish.yml@6fc2cf5fe9b8458452c494e8f3285d4aa250e076 # fix/release-on-stable (rehearsal)
+    uses: blacklanternsecurity/CLA/.github/workflows/publish.yml@31d721990c676a274e4edbc55dfe841ddf6995b6 # fix/release-on-stable (rehearsal)
     with:
       version: ${{ needs.check.outputs.version }}
       tag: ${{ needs.check.outputs.tag }}
